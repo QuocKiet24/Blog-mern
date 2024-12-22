@@ -1,10 +1,6 @@
-import { useUser } from "@clerk/clerk-react";
-import "react-quill-new/dist/quill.snow.css";
 import ReactQuill from "react-quill-new";
 
 const WritePage = () => {
-  const { isLoaded, isSignedIn } = useUser();
-
   if (!isLoaded || !isSignedIn) {
     return <div>Loading...</div>;
   }
